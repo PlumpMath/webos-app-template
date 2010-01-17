@@ -1,0 +1,36 @@
+webos-app-template - starter template for your webOS application
+================================================================
+
+This is a skeleton template that you can use as a starting point
+via downloading or forking it from GitHub.
+
+Once you have a copy you will want to do a few things:
+
+Use your settings
+-----------------
+
+Load up the appinfo.json and change the package id and developer
+information to match your own.
+
+Load up the framework_config.json and tweak for your needs.
+
+For more information on what can be configured, [see](http://developer.palm.com/index.php?option=com_content&view=article&id=1725)
+
+* debuggingEnabled: If true, debugging features are enabled
+* escapeHTMLInTemplates: If true, HTML escapes in any property substitution in templates, which is a good idea.
+* logEvents: Causes events sent by the framework and mouse events received to be logged at info level.
+* logLevel: Controls the logging levels. Choose between: Mojo.Log.LOG_LEVEL_ERROR, Mojo.Log.LOG_LEVEL_INFO, Mojo.Log.LOG_LEVEL_WARNING
+* timingEnabled: If true, the timing statistics enable on the scene transitions.
+* useNativeJSONParser: If true, uses the native JSON parser, if available
+
+Add your own code
+-----------------
+
+You will probably want a scene, so it is time to meet the [command line tools](http://developer.palm.com/index.php?option=com_content&view=article&id=1552)
+
+* palm-generate -t new_scene -p "name=first" .
+
+Once you are done with code, then you get to package and install your app for testing:
+
+* palm-package .
+* palm-install *.ipk
